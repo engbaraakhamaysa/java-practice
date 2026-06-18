@@ -1,4 +1,4 @@
-package Example_01
+package Example_01;
 
  class Studant {
 
