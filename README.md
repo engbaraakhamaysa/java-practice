@@ -41,13 +41,15 @@ Created multiple Employee objects, stored them in an array, and passed the array
 - **Object References:** Variables that store references to objects in memory instead of storing the object itself.
 - **Passing Objects to Methods:** Passing object references as parameters to allow methods to work with objects.
 
+---
+
 ## Example 03 - Static, Final and Constructor Overloading
 
 ### Description
 
 Demonstrated the use of static variables and methods, final variables, constructor overloading, object arrays, and passing objects to methods.
 
-### New OOP Topics
+### OOP Topics
 
 - **Static Members:** Class-level variables or methods that belong to the class itself and are shared between all objects.
 - **Final Variables:** Variables whose value can be assigned only once and cannot be changed after initialization.
@@ -55,3 +57,17 @@ Demonstrated the use of static variables and methods, final variables, construct
 - **Static Methods:** Methods that belong to the class and can be called without creating an object.
 - **Array of Objects:** Creating an array that stores references to multiple objects of the same class.
 - **Object Field Access:** Accessing object attributes through an object reference.
+
+---
+
+## Example 04 - Encapsulation and Business Logic
+
+### Description
+
+Created an Employee class with private fields, public getters and setters, and a business logic method to calculate an employee's salary based on working hours and overtime.
+
+### OOP Topics
+
+- **Getters and Setters:** Public methods used to access and modify private attributes while preserving encapsulation.
+- **Business Logic Methods:** Methods that implement the core rules and calculations of an application.
+- **Information Hiding:** Restricting direct access to object data and exposing it only through controlled methods.
