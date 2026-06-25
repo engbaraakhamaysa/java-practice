@@ -71,3 +71,20 @@ Created an Employee class with private fields, public getters and setters, and a
 - **Getters and Setters:** Public methods used to access and modify private attributes while preserving encapsulation.
 - **Business Logic Methods:** Methods that implement the core rules and calculations of an application.
 - **Information Hiding:** Restricting direct access to object data and exposing it only through controlled methods.
+
+---
+
+## Example 05 - Static Members for Shared State
+
+### Description
+
+Created employee objects with automatically generated IDs using a static variable shared among all objects. Each new object receives a unique ID, while a static method provides the next available ID.
+
+### OOP Topics
+
+- **Static Variables:** Class-level variables shared by all instances of a class.
+- **Static Methods:** Methods that belong to the class rather than individual objects and can access static members directly.
+- **Auto-Increment Identifier:** A technique that uses a shared counter to generate unique IDs for objects.
+- **Shared Class State:** Data that is common to all objects of a class and maintained through static members.
+
+---
