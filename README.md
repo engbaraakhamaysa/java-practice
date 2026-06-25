@@ -16,6 +16,8 @@ Created an Employee class with private attributes and controlled access through 
 
 ---
 
+---
+
 ## Example 01 - Student
 
 ### Description
@@ -30,6 +32,8 @@ Created a Student class with object initialization and controlled data access. M
 
 ---
 
+---
+
 ## Example 02 - Employee Array
 
 ### Description
@@ -40,6 +44,8 @@ Created multiple Employee objects, stored them in an array, and passed the array
 
 - **Object References:** Variables that store references to objects in memory instead of storing the object itself.
 - **Passing Objects to Methods:** Passing object references as parameters to allow methods to work with objects.
+
+---
 
 ---
 
@@ -60,6 +66,8 @@ Demonstrated the use of static variables and methods, final variables, construct
 
 ---
 
+---
+
 ## Example 04 - Encapsulation and Business Logic
 
 ### Description
@@ -71,6 +79,8 @@ Created an Employee class with private fields, public getters and setters, and a
 - **Getters and Setters:** Public methods used to access and modify private attributes while preserving encapsulation.
 - **Business Logic Methods:** Methods that implement the core rules and calculations of an application.
 - **Information Hiding:** Restricting direct access to object data and exposing it only through controlled methods.
+
+---
 
 ---
 
@@ -88,3 +98,40 @@ Created employee objects with automatically generated IDs using a static variabl
 - **Shared Class State:** Data that is common to all objects of a class and maintained through static members.
 
 ---
+
+---
+
+## Example 06 - Constructor Chaining
+
+### Description
+
+Created multiple constructors and connected them using `this()` to reuse initialization logic. When an object is created, constructors are executed in a chain.
+
+### OOP Topics
+
+- **Constructor Chaining:** The process of calling one constructor from another constructor within the same class using `this()`.
+- **Constructor Reuse:** Reusing existing constructor logic to avoid code duplication.
+- **this() Constructor Call:** A special syntax used to invoke another constructor in the same class.
+
+---
+
+---
+
+## Example 07 - Inheritance and Polymorphism
+
+### Description
+
+Created an inheritance hierarchy where `Person` is the base class, while `Student` and `Employee` extend it. Demonstrated multilevel inheritance, method overriding, upcasting, and runtime polymorphism.
+
+### OOP Topics
+
+- **Inheritance:** A mechanism that allows a class to acquire the attributes and methods of another class.
+- **Superclass:** The parent class from which other classes inherit.
+- **Subclass:** A class that inherits from another class.
+- **Multilevel Inheritance:** An inheritance chain where a class inherits from a subclass that already inherits from another class.
+- **Hierarchical Inheritance:** Multiple subclasses inheriting from the same superclass.
+- **super() Constructor Call:** Used to invoke a constructor of the parent class.
+- **Method Overriding:** Providing a new implementation of an inherited method in a subclass.
+- **Upcasting:** Storing a subclass object in a superclass reference variable.
+- **Runtime Polymorphism:** The ability to execute the overridden method of the actual object at runtime through a parent reference.
+- **instanceof Operator:** An operator used to determine whether an object belongs to a specific class or inheritance hierarchy.
