@@ -135,3 +135,7 @@ Created an inheritance hierarchy where `Person` is the base class, while `Studen
 - **Upcasting:** Storing a subclass object in a superclass reference variable.
 - **Runtime Polymorphism:** The ability to execute the overridden method of the actual object at runtime through a parent reference.
 - **instanceof Operator:** An operator used to determine whether an object belongs to a specific class or inheritance hierarchy.
+- **Downcasting:** Converting a superclass reference back to a subclass reference to access subclass-specific members.
+- **Type Casting:** Converting one reference type to another within the same inheritance hierarchy.
+- **Runtime Type Checking:** Determining an object's actual type during program execution using the `instanceof` operator.
+- **Dynamic Method Dispatch:** The JVM selects the overridden method to execute based on the actual object type at runtime.

@@ -1,5 +1,4 @@
 package Example_07;
-
 // Base Class (Superclass)
 // Stored in: Method Area
 class Person {
@@ -10,40 +9,41 @@ class Person {
     int ssn;
 
     // Constructor
+    // Object creation: Stack reference → Heap object
     public Person(String name, int ssn) {
         this.name = name;
         this.ssn = ssn;
     }
 }
 
-// Inheritance
-// Student IS-A Person
+// Single Inheritance
 class Student extends Person {
 
     // Instance Variable
     // Stored in: Heap
     double GPA;
 
-    // Constructor
-    // Constructor Chaining using super()
+    // Constructor Chaining (super())
     public Student(double GPA, String name, int ssn) {
         super(name, ssn);
         this.GPA = GPA;
     }
 
-    // Method
-    
+    // Instance Method
+    // Code: Method Area | Execution: Stack
     void calculateGPA() {
         System.out.println("Inside Student");
     }
 }
 
 // Multilevel Inheritance
-// BSC IS-A Student
 class BSC extends Student {
 
+    // Instance Variable
+    // Stored in: Heap
     int x;
 
+    // Constructor Chaining (super())
     public BSC(double GPA, String name, int ssn) {
         super(GPA, name, ssn);
     }
@@ -55,8 +55,6 @@ class BSC extends Student {
     }
 }
 
-// Multilevel Inheritance
-// MSC IS-A Student
 class MSC extends Student {
 
     int x;
@@ -72,19 +70,61 @@ class MSC extends Student {
     }
 }
 
+class Phd extends Student {
+
+    // Instance Variable
+    // Stored in: Heap
+    String col;
+
+    public Phd(double GPA, String name, int ssn) {
+        super(GPA, name, ssn);
+    }
+
+    // Method Overriding
+    @Override
+    void calculateGPA() {
+        System.out.println("Inside Phd");
+    }
+}
+
 // Hierarchical Inheritance
-// Employee IS-A Person
 class Employee extends Person {
 
+    // Instance Variable
+    // Stored in: Heap
     double salary;
 
     public Employee(double salary, String name, int ssn) {
         super(name, ssn);
         this.salary = salary;
     }
-      
+
     void calculateSalary() {
         System.out.println("Inside employee");
+    }
+}
+
+class PartTime extends Employee {
+
+    public PartTime(int hours, double rate, double salary, String name, int ssn) {
+        super(salary, name, ssn);
+    }
+
+    // Method Overriding
+    void calculateSalary() {
+        System.out.println("Inside part time");
+    }
+}
+
+class FullTime extends Employee {
+
+    public FullTime(double salary, String name, int ssn) {
+        super(salary, name, ssn);
+    }
+
+    // Method Overriding
+    void calculateSalary() {
+        System.out.println("inside full time");
     }
 }
 
@@ -92,10 +132,20 @@ class Employee extends Person {
 public class Main {
 
     // Static Method
-    static boolean test(Person s) {
+    // Code: Method Area | Execution: Stack
+    static void general(Person p) {
 
-        // instanceof Operator
-        return s instanceof Student;
+        // instanceof
+        if (p instanceof Student) {
+
+            // Downcasting
+            ((Student) p).calculateGPA();
+
+        } else if (p instanceof Employee) {
+
+            // Downcasting
+            ((Employee) p).calculateSalary();
+        }
     }
 
     // Main Method
@@ -103,32 +153,33 @@ public class Main {
     public static void main(String[] args) {
 
         // Upcasting
-        // Stack: s (Student reference)
-        // Heap: BSC object
-        Student s = new BSC(2.1, "Baraa", 123);
-
-        // Method Call
-        System.out.println(test(s));
+        // Stack: Student reference
+        // Heap: Phd object
+        Student s = new Phd(3.1, "Baraa", 123);
 
         // Upcasting
-        // Stack: s (Student reference)
-        // Heap: MSC object
-        s = new MSC(2.4, "Mahmaud", 1123);
+        // Stack: Employee reference
+        // Heap: FullTime object
+        Employee e = new FullTime(1253, "Ahmad", 123);
+
+        // Downcasting
+        // Stack reference → Heap object
+        ((Phd) s).col = "Science";
+
+        // Upcasting
+        s = new BSC(2.4, "Baraa", 123);
 
         // Method Call
-        System.out.println(test(s));
+        general(s);
+        general(e);
+
+        // Primitive Casting
+        double x = 3.4;
+
+        // Explicit Casting
+        int y = (int) x;
+
+        System.out.println(y);
+
     }
 }
-
-// Valid: Student reference can hold any subclass object
-// Student s = new BSC(...);
-// s = new MSC(...);
-
-// Invalid: BSC reference cannot hold a sibling class object
-// BSC b = new BSC(...);
-// b = new MSC(...); // Compile-time error
-
-/*
-A Student reference can point to any object of Student or its subclasses (e.g., BSC, MSC).
-A BSC reference can only point to BSC objects, not sibling classes like MSC.
-*/
