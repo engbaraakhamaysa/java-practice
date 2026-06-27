@@ -152,3 +152,19 @@ Created an array of `Vehicle` references to store objects of different subclasse
 
 - **Polymorphic Object Arrays:** Arrays whose element type is a superclass, allowing them to store objects of different subclasses.
 - **Heterogeneous Collections:** A collection that stores objects of different related types through inheritance.
+
+---
+
+## Example 09 - Abstract Classes
+
+### Description
+
+Introduced abstract classes and abstract methods to define a common structure for related classes. Concrete subclasses implement the required behavior by overriding abstract methods.
+
+### New OOP Topics
+
+- **Abstract Class:** A class that cannot be instantiated and is designed to be inherited by subclasses.
+- **Abstract Method:** A method declared without an implementation that must be implemented by concrete subclasses.
+- **Concrete Class:** A non-abstract class that provides implementations for all inherited abstract methods and can be instantiated.
+- **Mandatory Method Implementation:** A requirement that concrete subclasses implement all inherited abstract methods.
+- **Object Method Overriding (`toString()`):** Overriding the `toString()` method inherited from `Object` to provide a custom string representation of an object.
