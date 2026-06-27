@@ -139,3 +139,16 @@ Created an inheritance hierarchy where `Person` is the base class, while `Studen
 - **Type Casting:** Converting one reference type to another within the same inheritance hierarchy.
 - **Runtime Type Checking:** Determining an object's actual type during program execution using the `instanceof` operator.
 - **Dynamic Method Dispatch:** The JVM selects the overridden method to execute based on the actual object type at runtime.
+
+---
+
+## Example 08 - Polymorphic Object Arrays
+
+### Description
+
+Created an array of `Vehicle` references to store objects of different subclasses and processed them using polymorphism and the `instanceof` operator.
+
+### New OOP Topics
+
+- **Polymorphic Object Arrays:** Arrays whose element type is a superclass, allowing them to store objects of different subclasses.
+- **Heterogeneous Collections:** A collection that stores objects of different related types through inheritance.
