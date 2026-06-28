@@ -168,3 +168,34 @@ Introduced abstract classes and abstract methods to define a common structure fo
 - **Concrete Class:** A non-abstract class that provides implementations for all inherited abstract methods and can be instantiated.
 - **Mandatory Method Implementation:** A requirement that concrete subclasses implement all inherited abstract methods.
 - **Object Method Overriding (`toString()`):** Overriding the `toString()` method inherited from `Object` to provide a custom string representation of an object.
+
+---
+
+## Example 10 - Interfaces
+
+### Description
+
+Introduced interfaces, interface inheritance, and multiple interface implementation. Demonstrated how a class can extend a superclass while implementing one or more interfaces.
+
+### New OOP Topics
+
+- **Interface:** A contract that defines a set of methods a class must implement.
+- **Interface Implementation:** The process of providing implementations for all methods declared in an interface.
+- **Multiple Interface Implementation:** A class can implement multiple interfaces simultaneously.
+- **Interface Inheritance:** An interface can inherit from another interface using the `extends` keyword.
+- **Class and Interface Combination:** A class can extend one superclass while implementing one or more interfaces.
+- **Interface Constants:** Variables declared in an interface are implicitly `public`, `static`, and `final`.
+
+---
+
+## Example 11 - Interface Inheritance and Implementation
+
+### Description
+
+Demonstrated interface inheritance by extending one interface from another and implementing the inherited contract in a concrete class.
+
+### New OOP Topics
+
+- **Interface Inheritance:** An interface can inherit the members of another interface using the `extends` keyword.
+- **Interface Hierarchy:** A structure where one interface extends another, creating a chain of contracts.
+- **Contract Implementation:** A class implementing a derived interface must provide implementations for all inherited abstract methods.
