@@ -199,3 +199,116 @@ Demonstrated interface inheritance by extending one interface from another and i
 - **Interface Inheritance:** An interface can inherit the members of another interface using the `extends` keyword.
 - **Interface Hierarchy:** A structure where one interface extends another, creating a chain of contracts.
 - **Contract Implementation:** A class implementing a derived interface must provide implementations for all inherited abstract methods.
+
+---
+
+## Example 12 - Overriding `equals()`
+
+### Description
+
+Demonstrated how to override the `equals()` method to compare objects based on their content instead of their memory references. A generic search method was used to find different object types by relying on polymorphism.
+
+### New OOP Topics
+
+- **Method Overriding (`equals()`):** Providing a custom implementation of the `equals()` method to define object equality.
+- **Object Equality:** Comparing objects based on their state (data) rather than their memory addresses.
+- **Dynamic Dispatch:** The JVM invokes the appropriate overridden `equals()` method according to the actual object type at runtime.
+- **Generic Object Processing:** Using the `Object` class to write methods that can operate on different object types.
+
+---
+
+## Example 13 - Employee Management System
+
+### Description
+
+Built a simple employee management system using an abstract base class and specialized employee types. Demonstrated polymorphic object management, employee classification, salary calculation, and object filtering within a department.
+
+### New OOP Topics
+
+- **Aggregation:** A "has-a" relationship where one class contains references to objects of another class while they can exist independently.
+- **Enhanced For Loop:** A simplified loop used to iterate through arrays or collections.
+- **Object Filtering:** Selecting objects of a specific subtype from a polymorphic collection using `instanceof`.
+- **Domain Modeling:** Representing real-world entities and their relationships using classes and objects.
+
+## OOP Relationships
+
+| Relationship    | Definition                                                                                                               | Example                                                                                                 |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| **Inheritance** | An **"is-a"** relationship where a subclass inherits the properties and methods of a parent class.                       | `class SalariedEmp extends Employee {}`                                                                 |
+| **Association** | A **"uses-a"** or **"knows-a"** relationship where one class interacts with another without owning it.                   | A `Manager` manages an `Employee`.                                                                      |
+| **Aggregation** | A **"has-a"** relationship with **weak ownership**, where the contained object can exist independently of the container. | A `Department` has multiple `Employee` objects. Employees can still exist if the department is deleted. |
+| **Composition** | A **"has-a"** relationship with **strong ownership**, where the contained object's lifecycle depends on the container.   | A `House` has `Room` objects. If the house is destroyed, its rooms are destroyed as well.               |
+
+## OOP Relationships
+
+### 1. Inheritance (is-a)
+
+Represents an **"is-a"** relationship where a class inherits from another class.
+
+```java
+class Employee {
+    String name;
+}
+
+class SalariedEmp extends Employee {
+    double salary;
+}
+```
+
+👉 Meaning: SalariedEmp is a type of Employee.
+
+---
+
+### 2. Association (uses-a / knows-a)
+
+Represents a relationship where one class **uses another class** without owning it.
+
+```java
+class Employee {
+    String name;
+}
+
+class Manager {
+    void manage(Employee emp) {
+        System.out.println(emp.name);
+    }
+}
+```
+
+👉 Meaning: Manager uses Employee but does not own it.
+
+---
+
+### 3. Aggregation (has-a weak relationship)
+
+Represents a **weak ownership** where an object contains another object, but both can exist independently.
+
+```java
+class Employee {
+    String name;
+}
+
+class Department {
+    Employee employee;
+}
+```
+
+👉 Meaning: Department has Employees, but Employees can exist without Department.
+
+---
+
+### 4. Composition (has-a strong relationship)
+
+Represents a **strong ownership** where the contained object depends on the parent object.
+
+```java
+class Room {
+    String type;
+}
+
+class House {
+    Room room = new Room();
+}
+```
+
+👉 Meaning: House is responsible for creating Room, and Room cannot exist without House.
