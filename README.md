@@ -312,3 +312,16 @@ class House {
 ```
 
 👉 Meaning: House is responsible for creating Room, and Room cannot exist without House.
+
+## Example 14 - Object Cloning
+
+### Description
+
+Demonstrated how to create a copy of an object by implementing the `Cloneable` interface and overriding the `clone()` method. A cloned object was created independently from the original object.
+
+### New OOP Topics
+
+- **Object Cloning:** Creating a copy of an existing object instead of constructing a new one manually.
+- **Cloneable Interface:** A marker interface that indicates an object supports cloning through the `clone()` method.
+- **`clone()` Method:** A method inherited from the `Object` class and overridden to create object copies.
+- **Shallow Copy:** A copy in which primitive values are duplicated, while object references (if any) are shared between the original and the clone.
