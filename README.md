@@ -325,3 +325,17 @@ Demonstrated how to create a copy of an object by implementing the `Cloneable` i
 - **Cloneable Interface:** A marker interface that indicates an object supports cloning through the `clone()` method.
 - **`clone()` Method:** A method inherited from the `Object` class and overridden to create object copies.
 - **Shallow Copy:** A copy in which primitive values are duplicated, while object references (if any) are shared between the original and the clone.
+
+---
+
+## Example 15 - Deep Copy and Composition
+
+### Description
+
+Demonstrated how to perform a deep copy by cloning both an object and its contained objects. Also introduced composition, where one object owns and manages the lifecycle of another object.
+
+### New OOP Topics
+
+- **Deep Copy:** Creating a completely independent copy of an object, including all referenced objects.
+- **Composition:** A strong "has-a" relationship where one object owns and manages the lifetime of another object.
+- **Object Ownership:** A design concept where the parent object is responsible for creating and managing its contained objects.
