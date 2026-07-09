@@ -339,3 +339,17 @@ Demonstrated how to perform a deep copy by cloning both an object and its contai
 - **Deep Copy:** Creating a completely independent copy of an object, including all referenced objects.
 - **Composition:** A strong "has-a" relationship where one object owns and manages the lifetime of another object.
 - **Object Ownership:** A design concept where the parent object is responsible for creating and managing its contained objects.
+
+---
+
+## Example 16 - Nested Deep Copy
+
+### Description
+
+Extended deep copying to a complex object hierarchy where a `Student` owns multiple objects, each of which may also own other objects. Every contained object is cloned to create a fully independent copy.
+
+### New OOP Topics
+
+- **Nested Deep Copy:** Performing deep copy recursively through multiple levels of composed objects.
+- **Recursive Cloning:** Cloning an object by cloning all of its owned objects.
+- **Object Graph Cloning:** Creating an independent copy of an entire connected group of related objects.
