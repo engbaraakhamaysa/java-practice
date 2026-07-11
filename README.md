@@ -353,3 +353,33 @@ Extended deep copying to a complex object hierarchy where a `Student` owns multi
 - **Nested Deep Copy:** Performing deep copy recursively through multiple levels of composed objects.
 - **Recursive Cloning:** Cloning an object by cloning all of its owned objects.
 - **Object Graph Cloning:** Creating an independent copy of an entire connected group of related objects.
+
+---
+
+## Example 17 - Collections and File Handling
+
+### Description
+
+Introduced generic `ArrayList` collections for storing objects and strings, demonstrated common collection operations, and showed how to read data from a file using `FileInputStream` with exception handling.
+
+### New OOP Topics
+
+- **Generics:** A language feature that enables classes and methods to operate on specific data types while providing compile-time type safety.
+- **Collections Framework:** A set of classes and interfaces for storing and manipulating groups of objects.
+- **Exception Handling:** A mechanism for detecting and handling runtime errors using `try` and `catch` blocks.
+- **File Input:** Reading data from a file using Java's input stream classes.
+
+---
+
+## Example 18 - Buffered File Output
+
+### Description
+
+Demonstrated buffered file writing using `BufferedOutputStream`, resource management with `close()`, flushing buffered data with `flush()`, and guaranteed cleanup using a `finally` block.
+
+### New OOP Topics
+
+- **Buffered Streams:** Streams that use an internal buffer to improve input/output performance.
+- **Resource Management:** Properly releasing system resources such as file streams after use.
+- **`flush()` Method:** Forces buffered data to be written to the destination without closing the stream.
+- **`finally` Block:** A block that always executes after `try` and `catch`, typically used for cleanup operations.
